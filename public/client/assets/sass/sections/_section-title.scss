@@ -1,0 +1,106 @@
+/*------------------------------------------------
+    ## Section title
+------------------------------------------------*/
+.section-title {
+    margin-bottom: 30px;
+    position: relative;
+    .sub-title {
+        font-weight: 500;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 15px;
+        color: #797979;
+        &.left-line {
+            padding-left: 60px;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 10px;
+                height: 1px;
+                width: 40px;
+                background: #797979;
+            }
+        }
+        &.double-line {
+            &:before {
+                content: '';
+                position: absolute;
+                left: -50px;
+                top: 10px;
+                height: 1px;
+                width: 40px;
+                background: #797979;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                right: -50px;
+                top: 10px;
+                height: 1px;
+                width: 40px;
+                background: #797979;
+            }
+        }
+    }
+    .title {
+        margin-bottom: 0;
+        margin-top: 0;
+        span {
+            color: var(--main-color);
+        }
+    }
+    .content {
+        margin-top: 17px;
+        margin-bottom: 0;
+    }
+    .small-title {
+        margin-top: 18px;
+        line-height: 36px;
+    }
+    .phone {
+        font-weight: 400;
+        margin-top: 30px;
+        img {
+            margin-right: 6px;
+        }
+    }
+    .single-list-wrap {
+        margin-top: 21px;
+    }
+    .btn {
+        margin-top: 30px;
+    }
+    &.style-white {
+        .sub-title {
+            color: #fff;
+            &.left-line {
+                &:before {
+                    background: #fff;
+                }
+            }
+            &.right-line {
+                &:after {
+                    background: #fff;
+                }
+            }
+            &.double-line {
+                &:before {
+                    background: #fff;
+                }
+                &:after {
+                    background: #fff;
+                }
+            }
+        }
+        .title {
+            color: #fff;
+        }
+        .content {
+            color: #fff;
+        }
+        .small-title {
+            color: #fff;
+        }
+    }
+}

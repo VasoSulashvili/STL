@@ -1,0 +1,121 @@
+/*--------------------------------------------------
+    ##Footer
+---------------------------------------------------*/
+.footer-area {
+	position: relative;
+	background: #1c2a44;
+	.subscribe-area-inner {
+		border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+		padding-bottom: 65px;
+		margin-bottom: 65px;
+		border-radius: 0;
+	}
+ 	.widget {
+ 		position: relative;
+ 		z-index: 2;
+ 		margin-bottom: 70px;
+ 	}
+	.widget-title {
+		margin-bottom: 30px;
+		position: relative;
+		color: rgba(255, 255, 255, 0.9);
+	}
+	.widget_about {
+		.thumb {
+			margin-bottom: 30px;
+			img {
+				width: 130px;
+			}
+		}
+		.details {
+			p {
+				margin-bottom: 0;
+				color: rgba(255, 255, 255, 0.9);
+				font-size: 15px;
+				padding-bottom: 30px;
+			}
+			.social-media {
+				margin-top: 26px;
+				li {
+					a:hover {
+						background: var(--main-color);
+						color: $color-white;
+					}
+				}
+			}
+		}
+	}
+	.widget_contact {
+		ul {
+			padding: 0;
+			li {
+	    		color: rgba(255, 255, 255, 0.9);
+				font-size: 15px;
+				i {
+					color: rgba(255, 255, 255, 0.9);
+				}
+			}
+		}
+	}
+	.widget_nav_menu {
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				list-style: none;
+				margin-bottom: 7px;
+				position: relative;
+				color: rgba(255, 255, 255, 0.9);
+				padding-left: 15px;
+				&:after {
+					content: '\f105';
+					position: absolute;
+					left: 0;
+					top: 0;
+					font-family: FontAwesome;
+					transition: 0.4s;
+				}
+				&:hover {
+					&:after {
+						color: var(--main-color);
+					}
+				}
+				a{
+					font-size: 15px;
+				}
+			}
+		}
+	}
+}
+
+.footer-area-4{
+	background-image: url('../img/footer/1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: 0;
+	&:after{
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.8;
+		z-index: -1;
+		background-color: #1C2A44;
+	}
+}
+
+.footer-bottom {
+	border-top: 1px solid rgba(255, 255, 255, 0.08);
+	padding: 23px 0;
+	position: relative;
+	z-index: 2;
+	color: rgba(255, 255, 255, 0.9);
+	p {
+		margin-bottom: 0;
+		color: rgba(255, 255, 255, 0.9);
+	}
+}

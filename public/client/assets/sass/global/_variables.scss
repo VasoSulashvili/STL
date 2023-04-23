@@ -1,0 +1,27 @@
+
+//== Template Main Color
+$color-white : #fff;
+$primary-color : #9800FF;
+
+//== social media colors
+$facebook: #3b5999;
+$twitter: #55acee;
+$instagram: #e4405f;
+$youtube: #cd201f;
+$pinterest: #bd081c;
+
+// linear gradient 
+$gradient_violet: linear-gradient(201.18deg, #B378FB 6.98%, #832CF1 84.26%); 
+$gradient_pink:linear-gradient(210.43deg, #F188E0 6.94%, #F4648B 57.69%);
+$gradient_indigo:linear-gradient(210.43deg, #979FFA 6.94%, #4247F9 91.67%);
+$gradient_green:linear-gradient(214.09deg, #71CDF4 13.29%, #3599FD 83.94%);
+/*-----------------
+    # Typography
+-----------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+//  transition
+$transition: all .4s ease-in;
+$transition-long: all .5s ease-in;
+$box-shadow: 0px -4px 25px rgba(144, 0, 255, 0.07);
+$box-shadow2: 0px 10px 30px rgba(0, 33, 71, 0.08);

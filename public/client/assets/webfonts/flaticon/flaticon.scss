@@ -1,0 +1,65 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?65427021d691b02297e6e829cc266930") format("truetype"),
+url("./flaticon.woff?65427021d691b02297e6e829cc266930") format("woff"),
+url("./flaticon.woff2?65427021d691b02297e6e829cc266930") format("woff2"),
+url("./flaticon.eot?65427021d691b02297e6e829cc266930#iefix") format("embedded-opentype"),
+url("./flaticon.svg?65427021d691b02297e6e829cc266930#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "study": "\f101",
+    "shopping-bag": "\f102",
+    "keys": "\f103",
+    "scholarship": "\f104",
+    "remove-file": "\f105",
+    "letter-u": "\f106",
+    "magnet": "\f107",
+    "letter-u-1": "\f108",
+    "quotation-mark": "\f109",
+    "left-quote": "\f10a",
+);
+
+.flaticon-study:before {
+    content: map-get($flaticon-map, "study");
+}
+.flaticon-shopping-bag:before {
+    content: map-get($flaticon-map, "shopping-bag");
+}
+.flaticon-keys:before {
+    content: map-get($flaticon-map, "keys");
+}
+.flaticon-scholarship:before {
+    content: map-get($flaticon-map, "scholarship");
+}
+.flaticon-remove-file:before {
+    content: map-get($flaticon-map, "remove-file");
+}
+.flaticon-letter-u:before {
+    content: map-get($flaticon-map, "letter-u");
+}
+.flaticon-magnet:before {
+    content: map-get($flaticon-map, "magnet");
+}
+.flaticon-letter-u-1:before {
+    content: map-get($flaticon-map, "letter-u-1");
+}
+.flaticon-quotation-mark:before {
+    content: map-get($flaticon-map, "quotation-mark");
+}
+.flaticon-left-quote:before {
+    content: map-get($flaticon-map, "left-quote");
+}
