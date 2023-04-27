@@ -70,7 +70,7 @@
                             <nav>
                                 {{-- {{dd(url()->full())}} --}}
                                 @foreach(config('app.available_locales') as $locale => $language)
-                                    <a @if($locale == app()->getLocale()) style="color: #9000ff;" @endif href="{{ str_replace('/' . app()->getLocale() . '/', '/' . $locale . '/', url()->full()) }}">
+                                    <a @if($locale == app()->getLocale()) style="color: #9000ff;" @endif href="{{ str_replace('/' . app()->getLocale(), '/' . $locale . '/', url()->full()) }}">
                                         {{ $language }}
                                     </a>
                                 @endforeach
