@@ -68,9 +68,16 @@
                                 @endif
                             </div>
                             <nav>
-                                {{-- {{dd(url()->full())}} --}}
+                                @php
+                                    $uri = request()->path();
+                                    $arr = explode('/', $uri);
+                                @endphp
                                 @foreach(config('app.available_locales') as $locale => $language)
-                                    <a @if($locale == app()->getLocale()) style="color: #9000ff;" @endif href="{{ str_replace('/' . app()->getLocale(), '/' . $locale . '/', url()->full()) }}">
+                                @php
+                                    $arr[0] = $locale;
+                                    $URL = url('/') . '/' . implode('/', $arr);
+                                @endphp
+                                    <a @if($locale == app()->getLocale()) style="color: #9000ff;" @endif href="{{ $URL }}">
                                         {{ $language }}
                                     </a>
                                 @endforeach
