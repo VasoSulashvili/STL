@@ -5,6 +5,7 @@ namespace App\Filament\Resources\ContactResource\Pages;
 use App\Filament\Resources\ContactResource;
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\EditRecord;
+use Illuminate\Database\Eloquent\Model;
 
 class EditContact extends EditRecord
 {

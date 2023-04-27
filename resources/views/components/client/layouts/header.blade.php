@@ -23,27 +23,28 @@
                     <div class="top-header">
                         <div class="social-icon">
                             <ul>
-                                @if(isset($contact?->socials['linkedin']))
+                                @if(isset($contact?->socials['linkedin']) && !empty($contact?->socials['linkedin']))
                                 <li>
                                     <a target="__blank" href="{{ $contact?->socials['linkedin'] }}"
                                         ><i class="fab fa-linkedin-in"></i
                                     ></a>
                                 </li>
                                 @endif
-                                @if(isset($contact?->socials['facebook']))
+                                @if(isset($contact?->socials['facebook']) && !empty($contact?->socials['facebook']))
                                 <li>
                                     <a target="__blank" href="{{ $contact?->socials['facebook'] }}"><i class="fa fa-facebook-f"></i></a>
                                 </li>
                                 @endif
-                                @if(isset($contact?->socials['twitter']))
+                                {{-- {{dd($contact?->socials['twitter'])}} --}}
+                                @if(isset($contact?->socials['twitter']) && $contact?->socials['twitter'] != '')
                                 <li>
-                                    <a target="__blank" href="{{ $contact?->socials['twitter'] }}"><i class="fa fa-twitter-f"></i></a>
+                                    <a target="__blank" href="{{ $contact?->socials['twitter'] }}"><i class="fa fa-twitter"></i></a>
                                 </li>
                                 @endif
                                 {{-- <li>
                                     <a href="#"><i class="fab fa-twitter"></i></a>
                                 </li> --}}
-                                @if(isset($contact?->socials['instagram']))
+                                @if(isset($contact?->socials['instagram']) && !empty($contact?->socials['instagram']))
                                 <li>
                                     <a target="__blank" href="{{ $contact?->socials['instagram'] }}"><i class="fab fa-instagram"></i></a>
                                 </li>

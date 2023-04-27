@@ -75,7 +75,7 @@ class ContactResource extends Resource
                         TextInput::make('socials.facebook')
                             ->label('Facebook'),
                         TextInput::make('socials.twitter')
-                            ->label('Instagram'),
+                            ->label('Twitter'),
                         TextInput::make('socials.instagram')
                             ->label('Instagram'),
                         TextInput::make('socials.linkedin')

@@ -13,18 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('articles', function (Blueprint $table) {
+        Schema::create('banners', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
-            $table->unsignedBigInteger('author_id')->nullable();
-            $table->json('title');
-            $table->json('body');
-            $table->text('tag')->nullable();
-            $table->date('published_at')->default(now());
+            $table->string('back_image')->nullable();
+            $table->string('image')->nullable();
+            $table->string('url')->nullable();
+            $table->json('title')->nullable();
+            $table->json('sub_title')->nullable();
+            $table->json('description')->nullable();
             $table->boolean('active')->default(0);
             $table->timestamps();
-
-            $table->foreign('author_id')->references('id')->on('people');
         });
     }
 
@@ -35,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('articles');
+        Schema::dropIfExists('banners');
     }
 };

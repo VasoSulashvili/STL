@@ -22,6 +22,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\TagsInput;
 
 class ArticleResource extends Resource
 {
@@ -91,6 +92,10 @@ class ArticleResource extends Resource
                             ]),
 
                         ]),
+                        TagsInput::make('tag')
+                            ->separator(',')
+                            ->helperText('Use "," to seperate tags'),
+
                         Checkbox::make('active')
                             ->label('Active')
                             ->helperText('On if active'),

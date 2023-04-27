@@ -17,5 +17,7 @@ return [
     'courses' => 'კურსები',
     'events' => 'ღონისძიებები',
     'read more' => 'ვრცლად',
-    'recent articles' => 'უახლესი სტატიები'
+    'recent articles' => 'უახლესი სტატიები',
+    'tags' => 'ტეგები',
+    'tag' => 'ტეგი',
 ];

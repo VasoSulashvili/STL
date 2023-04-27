@@ -17,5 +17,7 @@ return [
     'courses' => 'Courses',
     'events' => 'Events',
     'read more' => 'Read More',
-    'recent articles' => 'Recent Articles'
+    'recent articles' => 'Recent Articles',
+    'tags' => 'Tags',
+    'tag' => 'Tag',
 ];

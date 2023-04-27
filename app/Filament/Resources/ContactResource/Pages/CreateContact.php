@@ -14,6 +14,7 @@ class CreateContact extends CreateRecord
     // Costumization
     protected function handleRecordCreation(array $data): Model
     {
+        // dd($data);
         $contact = new Contact();
         $contact->emails = $data['emails'];
         $contact->phones = $data['phones'];

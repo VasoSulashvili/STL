@@ -12,7 +12,7 @@
                     <div class="col-xl-7 text-center">
                         <div class="section-heading">
                             <span class="sub-heading">{{ __('words.contact') }}</span>
-                            <h2 class="title">{{ __('words.contact us') }}</h2>
+                            {{-- <h2 class="title">{{ __('words.contact us') }}</h2> --}}
                         </div>
                     </div>
                 </div>

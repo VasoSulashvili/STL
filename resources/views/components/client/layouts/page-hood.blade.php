@@ -7,9 +7,13 @@
                     <h2 class="page-title">{{ __('words.' . $title) }}</h2>
                     <ul class="page-list">
                         @foreach($breadcrumbs as $breadcrumb)
-                        <li><a href="{{ $breadcrumb['url'] }}">{{ __('words.' . $breadcrumb['title']) }}</a></li>
+                            @if(isset($breadcrumb['url']))
+                                <li><a href="{{ $breadcrumb['url'] }}">{{ $breadcrumb['title'] }}</a></li>
+                            @else
+                                <li>{{ $breadcrumb['title'] }}</li>
+                            @endif
                         @endforeach
-                        <li>{{ __('words.' . $title) }}</li>
+                        {{-- <li>{{ $page }}</li> --}}
                     </ul>
                 </div>
             </div>

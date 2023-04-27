@@ -3,21 +3,23 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Spatie\Translatable\HasTranslations;
+use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
     use HasFactory, HasTranslations;
 
-    protected $fillable = ['image', 'author_id', 'title', 'body', 'published_at', 'active'];
+    protected $fillable = ['image', 'author_id', 'title', 'tag', 'body', 'published_at', 'active'];
 
     public $translatable = ['title', 'body'];
 
     protected $casts = [
         'socials' => 'array',
-        'published_at' => 'date'
+        // 'tag' => 'string',
+        'published_at' => 'date',
     ];
 
 
@@ -34,6 +36,14 @@ class Article extends Model
     {
         return $this->belongsTo(Person::class, 'author_id');
     }
+
+    public function tags()
+    {
+        return $this->morphToMany(
+            Tag::class, 
+            'taggable',);
+    }
+
 
 
     /**
