@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\BannerResource\Pages;
-use App\Filament\Resources\BannerResource\RelationManagers;
-use App\Models\Banner;
+use App\Filament\Resources\IntroResource\Pages;
+use App\Filament\Resources\IntroResource\RelationManagers;
+use App\Models\Intro;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
@@ -17,13 +17,13 @@ use Filament\Forms\Components\Tabs;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Checkbox;
-use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\IconColumn;
+use Filament\Forms\Components\TextInput;
 
-class BannerResource extends Resource
+class IntroResource extends Resource
 {
-    protected static ?string $model = Banner::class;
+    protected static ?string $model = Intro::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-collection';
 
@@ -32,37 +32,34 @@ class BannerResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                Card::make()
+        ->schema([
+            Card::make()
                 ->schema([
-                    FileUpload::make('back_image')
+                    FileUpload::make('image_1')
                         ->image()
                         ->imageResizeMode('cover')
-                        ->imageCropAspectRatio('1920:676')
-                        ->imageResizeTargetWidth('1920')
-                        ->imageResizeTargetHeight('676')
-                        ->label('Back Image')
-                        ->helperText('1920*676'),
-                    FileUpload::make('image')
-                        ->image()
-                        ->imageResizeMode('cover')
-                        ->imageCropAspectRatio('536:648')
-                        ->imageResizeTargetWidth('536')
-                        ->imageResizeTargetHeight('648')
+                        ->imageCropAspectRatio('283:339')
+                        ->imageResizeTargetWidth('283')
+                        ->imageResizeTargetHeight('339')
                         ->label('Image')
-                        ->helperText('536*648'),
-                    TextInput::make('url')
-                        ->label('Resource URL'),
+                        ->helperText('283*339'),
+                    FileUpload::make('image_2')
+                        ->image()
+                        ->imageResizeMode('cover')
+                        ->imageCropAspectRatio('283:339')
+                        ->imageResizeTargetWidth('283')
+                        ->imageResizeTargetHeight('339')
+                        ->label('Image')
+                        ->helperText('283*339'),
+
                     Tabs::make('Heading')
                         ->tabs([
                             Tabs\Tab::make('Geo')
                                 ->schema([
                                     TextInput::make('title.ka')
                                         ->label('Title Geo'),
-                                    TextInput::make('sub_title.ka')
-                                        ->label('Sub Title Geo'),
-                                    RichEditor::make('description.ka')
-                                        ->label('Description Geo')
+                                    RichEditor::make('text.ka')
+                                        ->label('Text Geo')
                                         ->toolbarButtons([
                                             'attachFiles',
                                             'blockquote',
@@ -83,10 +80,8 @@ class BannerResource extends Resource
                                 ->schema([
                                     TextInput::make('title.en')
                                         ->label('Title Eng'),
-                                    TextInput::make('sub_title.en')
-                                        ->label('Sub Title Eng'),
-                                    RichEditor::make('description.en')
-                                        ->label('Description Eng')
+                                    RichEditor::make('text.en')
+                                        ->label('Text Eng')
                                         ->toolbarButtons([
                                             'attachFiles',
                                             'blockquote',
@@ -101,15 +96,14 @@ class BannerResource extends Resource
                                             'redo',
                                             'strike',
                                             'undo',
-                                        ]),
-                                
+                                    ]),
                                 ]),
                         ])
                     ]),
                     Checkbox::make('active')
                         ->label('Active')
                         ->helperText('On if active'),
-            ]);
+                ]);
     }
 
     public static function table(Table $table): Table
@@ -118,13 +112,12 @@ class BannerResource extends Resource
             ->columns([
                 TextColumn::make('id'),
                 TextColumn::make('title'),
-                TextColumn::make('sub_title'),
-                TextColumn::make('description')
+                TextColumn::make('text')
                     ->limit(50)
                     ->wrap()
                     ->html(),
                 IconColumn::make('active')
-                ->boolean()
+                    ->boolean()
             ])
             ->filters([
                 //
@@ -147,9 +140,9 @@ class BannerResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBanners::route('/'),
-            'create' => Pages\CreateBanner::route('/create'),
-            'edit' => Pages\EditBanner::route('/{record}/edit'),
+            'index' => Pages\ListIntros::route('/'),
+            'create' => Pages\CreateIntro::route('/create'),
+            'edit' => Pages\EditIntro::route('/{record}/edit'),
         ];
     }    
 }

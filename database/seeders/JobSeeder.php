@@ -9,8 +9,8 @@ use Illuminate\Database\Seeder;
 class JobSeeder extends Seeder
 {
     private $jobs = [
-        ['ka' => 'გუნდი', 'en' => 'Team'],
-        ['ka' => 'ინსტრუქტორი', 'en' => 'Instructor']
+        PJ_TEAM,
+        PJ_INSTRUCTOR
     ];
     /**
      * Run the database seeds.

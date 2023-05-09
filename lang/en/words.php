@@ -20,4 +20,7 @@ return [
     'recent articles' => 'Recent Articles',
     'tags' => 'Tags',
     'tag' => 'Tag',
+    'days' => 'Days',
+    'view more' => 'View More',
+    'popular courses' => 'Popular Courses'
 ];

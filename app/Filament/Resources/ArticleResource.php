@@ -23,6 +23,8 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\TagsInput;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\IconColumn;
 
 class ArticleResource extends Resource
 {
@@ -108,7 +110,10 @@ class ArticleResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('id'),
+                TextColumn::make('title'),
+                IconColumn::make('active')
+                    ->boolean()
             ])
             ->filters([
                 //

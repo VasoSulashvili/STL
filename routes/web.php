@@ -4,6 +4,7 @@ use App\Http\Controllers\Client\AboutController;
 use App\Http\Controllers\Client\ArticleController;
 use App\Http\Controllers\Client\CategoryController;
 use App\Http\Controllers\Client\ContactController;
+use App\Http\Controllers\Client\CourseController;
 use App\Http\Controllers\Client\EventController;
 use App\Http\Controllers\Client\HomeController;
 use App\Http\Controllers\Client\PersonController;
@@ -19,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Route::get('/admin/login', HomeController::class)->name('login');
 
 Route::group(['prefix' => '{locale?}', 'middleware' => 'localization'], function(){
     
@@ -53,6 +56,15 @@ Route::group(['prefix' => '{locale?}', 'middleware' => 'localization'], function
      * -----------------------------------------------------------
      */
     Route::get('/events', [EventController::class, 'index'])->name('events.index');
+
+
+    /**
+     * -----------------------------------------------------------
+     * ====  Course Routes
+     * -----------------------------------------------------------
+     */
+    Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
+    Route::get('/courses/{course}', [CourseController::class, 'show'])->name('courses.show');
 
 
     /**

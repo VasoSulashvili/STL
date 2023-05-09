@@ -35,6 +35,9 @@
         }
     },
     "autoload-dev": {
+        "files": [
+            "app/constants.php"
+        ],
         "psr-4": {
             "Tests\\": "tests/"
         }

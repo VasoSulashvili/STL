@@ -2,13 +2,21 @@
 
 @section('main.content')
 
-<x-client.home.banner :banner="$banner" />
+@if(isset($banner) && $banner != null)
+    <x-client.home.banner :banner="$banner" />
+@endif
 
-<x-client.home.services />
+@if(isset($services) && $services != null)
+    <x-client.home.services :services="$services" />
+@endif
 
-<x-client.home.intro />
+@if(isset($intro) && $intro != null)
+    <x-client.home.intro :intro="$intro" />
+@endif
 
-<x-client.home.team :team="$team" />
+@if(isset($team) && $team != null)
+    <x-client.home.team :team="$team" />
+@endif
 
 {{-- <!-- category section start -->
 <div class="category-area category-style-2 pd-bottom-120">

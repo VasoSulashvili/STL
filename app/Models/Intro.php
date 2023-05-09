@@ -5,24 +5,21 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\Translatable\HasTranslations;
-use Illuminate\Database\Eloquent\Casts\Attribute;
 
-class Contact extends Model
+class Intro extends Model
 {
     use HasFactory, HasTranslations;
 
+    protected $fillable = ['img_1', 'img_2', 'title', 'text', 'list', 'active'];
+
     protected $casts = [
-        'emails' => 'array',
-        'address' => 'array',
-        'phones' => 'array',
-        'socials' => 'array',
+        'title' => 'array',
+        'text' => 'array',
+        'list' => 'array',
     ];
 
-    protected $fillable = ['address', 'emails', 'phones', 'map', 'image', 'socials', 'active'];
+    public $translatable = ['title', 'text', 'list'];
 
-    public $translatable = ['address'];
-
-    
     /**
      * Scope a query to only include active users.
      *
@@ -33,5 +30,4 @@ class Contact extends Model
     {
         $query->where('active', 1);
     }
-
 }

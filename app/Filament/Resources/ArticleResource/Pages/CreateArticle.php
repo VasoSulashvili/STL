@@ -24,8 +24,6 @@ class CreateArticle extends CreateRecord
     // Costumization
     protected function handleRecordCreation(array $data): Model
     {
-        // dd($data);
-        // dd($data['tags']);
         $article = new Article();
         $article->image = $data['image'];
         $article->tag = $data['tag'];

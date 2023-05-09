@@ -47,7 +47,7 @@
                 @endforeach
             </ul>
         </div>
-        <div class="widget widget_tags">
+        {{-- <div class="widget widget_tags">
             <h4 class="widget-title">{{ __('tags') }}</h4>
             <div class="tagcloud">
                 <a href="#">Art</a>
@@ -56,7 +56,7 @@
                 <a href="#">Designer</a>
                 <a href="#">Landing</a>
             </div>
-        </div>
+        </div> --}}
         {{-- <div class="widget widget_catagory">
             <h4 class="widget-title">Archive</h4>                                 
             <ul class="catagory-items">

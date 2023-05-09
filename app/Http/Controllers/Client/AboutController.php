@@ -23,7 +23,10 @@ class AboutController extends Controller
 
         $team = '';
         $about = About::first();
-        $team = Job::where('name->en', 'Team')->first()->persons;
+        $team = Job::where('name->en', PJ_TEAM['en'])
+            ->orWhere('name->ka', PJ_TEAM['ka'])
+            ->first()
+            ->persons;
         if(!$about)
         {
             abort(404);

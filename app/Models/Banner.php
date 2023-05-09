@@ -10,10 +10,14 @@ class Banner extends Model
 {
     use HasFactory, HasTranslations;
 
-    protected $fillable = ['image', 'back_image', 'title', 'sub_title', 'url', 'body', 'active'];
+    protected $fillable = ['image', 'back_image', 'title', 'sub_title', 'url', 'description', 'active'];
 
     public $translatable = ['title', 'sub_title', 'description'];
 
+    protected $casts = [
+        'title' => 'array',
+        'sub_title' => 'array',
+    ];
 
 
 

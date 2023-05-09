@@ -12,6 +12,8 @@ use Filament\Resources\Table;
 use Filament\Tables;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\IconColumn;
 
 class ServiceResource extends Resource
 {
@@ -33,7 +35,14 @@ class ServiceResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('id'),
+                TextColumn::make('title'),
+                TextColumn::make('text')
+                    ->limit(50)
+                    ->wrap()
+                    ->html(),
+                IconColumn::make('active')
+                    ->boolean()
             ])
             ->filters([
                 //

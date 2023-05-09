@@ -53,8 +53,8 @@
                     <ul>
                         <li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('words.home') }}</a></li>
                         <li><a href="{{ route('about', ['locale' => app()->getLocale()]) }}">{{ __('words.about us') }}</a></li>
-                        <li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('words.blog') }}</a></li>
-                        <li><a href="{{ route('home', ['locale' => app()->getLocale()]) }}">{{ __('words.courses') }}</a></li>
+                        <li><a href="{{ route('articles.index', ['locale' => app()->getLocale()]) }}">{{ __('words.blog') }}</a></li>
+                        <li><a href="{{ route('courses.index', ['locale' => app()->getLocale()]) }}">{{ __('words.courses') }}</a></li>
                         <li><a href="{{ route('contact', ['locale' => app()->getLocale()]) }}">{{ __('words.contact') }}</a></li>
                     </ul>
                 </div>

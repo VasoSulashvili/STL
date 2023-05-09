@@ -11,13 +11,13 @@ class="about-area about-style-2 bg-relative pd-top-120 pd-bottom-120"
                 >
                     <div class="thumb left-thumb">
                         <img
-                            src="assets/img/about/about-2.jpg"
+                            src="{{ asset('storage/' . $intro?->image_1) }}"
                             alt="image here"
                         />
                     </div>
                     <div class="thumb right-thumb">
                         <img
-                            src="assets/img/about/about-3.jpg"
+                            src="{{ asset('storage/' . $intro?->image_2) }}"
                             alt="image here"
                         />
                     </div>
@@ -29,16 +29,12 @@ class="about-area about-style-2 bg-relative pd-top-120 pd-bottom-120"
                 >
                     <div class="section-title mb-0">
                         <h2 class="title">
-                            We’re here to help your modern
-                            <span>Education</span>
+                            {{ $intro?->title }}
                         </h2>
                         <p class="content mb-4">
-                            This is Photoshop's version of Lorem
-                            Ipsum. egravidae. sollicitudin, lorem
-                            quis bibendum auctor, nisil elit more
-                            consequat ipsumsagittis
+                            {!! $intro?->text !!}
                         </p>
-                        <p class="color-base mb-3">
+                        {{-- <p class="color-base mb-3">
                             <img
                                 class="mr-2 rounded-circle"
                                 src="assets/img/icon/4.png"
@@ -64,7 +60,7 @@ class="about-area about-style-2 bg-relative pd-top-120 pd-bottom-120"
                         </p>
                         <a class="btn btn-base" href="course.html"
                             >Explore More +</a
-                        >
+                        > --}}
                     </div>
                 </div>
             </div>

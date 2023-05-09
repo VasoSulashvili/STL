@@ -20,4 +20,7 @@ return [
     'recent articles' => 'უახლესი სტატიები',
     'tags' => 'ტეგები',
     'tag' => 'ტეგი',
+    'days' => 'დღე',
+    'view more' => 'მეტის ნახვა',
+    'popular courses' => 'პოპულარული კურსები',
 ];

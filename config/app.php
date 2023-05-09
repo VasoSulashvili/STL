@@ -87,8 +87,8 @@ return [
     'client_locale' => 'ka',
 
     'available_locales' => [
-        'en' => 'English',
-        'ka' => 'ქართული',
+        'en' => 'En',
+        'ka' => 'ქა',
     ],
 
     /*

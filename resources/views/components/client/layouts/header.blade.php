@@ -124,7 +124,7 @@
                                     <a href="{{ route('events.index') }}">{{ __('words.events') }}</a>
                                 </li>
                                 <li class=" current-menu-item">
-                                    <a href="{{ route('home') }}">{{ __('words.courses') }}</a>
+                                    <a href="{{ route('courses.index') }}">{{ __('words.courses') }}</a>
                                 </li>
                                 <li class=" current-menu-item">
                                     <a href="{{ route('articles.index') }}">{{ __('words.blog') }}</a>
